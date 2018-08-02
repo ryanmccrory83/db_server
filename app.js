@@ -1,7 +1,7 @@
 const express =  require('express')
 const app = express()
 const queries = require('./queries')
-const port =  process.env.NODE_ENV || 8000 
+const port =  process.env.PORT || 8000 
 
 app.get('/',(req,res,next) => {
     queries.getAll().then(cats => res.json({cats}))
